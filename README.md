@@ -3,7 +3,7 @@
 **Şifreyi Kır** oyununa hoş geldiniz! Bu proje, oyuncuların rastgele oluşturulmuş bir şifreyi belirli sayıda denemede tahmin etmeye çalıştığı eğlenceli ve etkileşimli bir tarayıcı tabanlı oyundur.
 
 ## Canlı Demo
-Oyunu oynamak için: [https://sifreyibul.vercel.app](https://sifreyibul.vercel.app)
+Oyunu oynamak için: [https://sifreyibul.vercel.app](https://kilitleracilsin.vercel.app)](https://kilitleracilsin.vercel.app)
 
 ## Yenilikler (v6.2)
 - **Tekrar Oyna:** Oyunu kazandıktan sonra aynı kullanıcı adıyla tekrar oynayabilirsiniz.

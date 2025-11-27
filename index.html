@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifreyi Kır</title>
+    <link rel="stylesheet" href="index-style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="res/favicon.png">
+    <script type="text/javascript" src="generateNew.js"></script>
+    <script type="text/javascript" src="interactions.js"></script>
+</head>
+
+<body>
+    <!--Intro-->
+    <div id="intro" class="intro">
+        <h1>ŞİFREYİ KIR</h1>
+    </div>
+
+    <!--Header-->
+    <div class="header">
+        <span id="headerLabel">O Kilitler Açılsın Lütfen...</span>
+    </div>
+
+    <!--Lock-->
+    <div class="lock-animation" id="lockAnimation">
+        <div class="lock-base">
+            <!--Enter Code-->
+            <input type="number" id="guess1" autofocus="autofocus" oninput="onCodeInput(1)"
+                onkeydown="return event.keyCode !== 69" placeholder="0">
+            <input type="number" id="guess2" autofocus="autofocus" oninput="onCodeInput(2)"
+                onkeydown="return event.keyCode !== 69" placeholder="0">
+            <input type="number" id="guess3" autofocus="autofocus" oninput="onCodeInput(3)"
+                onkeydown="return event.keyCode !== 69" placeholder="0">
+        </div>
+    </div>
+
+    <!--Hints-->
+    <div class="hint-wrapper">
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint1">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #4CAF50">2 DOĞRU FAKAT<br />YANLIŞ YERDE</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint2">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #CCDB39">1 DOĞRU VE<br />DOĞRU YERDE</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint3">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #FEC007">1 DOĞRU FAKAT<br />YANLIŞ YERDE</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint4">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #FEC007">1 DOĞRU FAKAT<br />YANLIŞ YERDE</span>
+        </section>
+
+        <section class="hint">
+            <section class="hint-top">
+                <span id="hint5">0 0 0</span>
+            </section>
+            <span class="hint-text" style="color: #F44336">HİÇBİRİ<br />DOĞRU DEĞİL</span>
+        </section>
+    </div>
+
+    <!--Continue Button-->
+    <button onclick="restartGame()" id="continueButton" class="continue-button">Tekrar Oyna</button>
+
+    <!--Footer-->
+    <footer class="footer">
+        <!-- Reveal Answer Hidden -->
+        <span id="answerLabel" style="display: none;"></span>
+    </footer>
+
+    <!-- Nickname Modal -->
+    <div id="nicknameModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>HOŞGELDİNİZ</h2>
+            <input type="text" id="nicknameInput" placeholder="Kullanıcı Adı Giriniz" maxlength="15">
+            <button onclick="startGame()">BAŞLA</button>
+        </div>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="leaderboard-container">
+        <h3>SKOR TABLOSU</h3>
+        <ul id="leaderboardList"></ul>
+    </div>
+
+    <!-- Timer -->
+    <div id="timerDisplay" class="timer">00:00:00</div>
+
+    <!-- Creator Signature -->
+    <a href="https://github.com/haliltek/sifreyibul/tree/main" target="_blank" class="creator-signature">
+        Made with <span class="heart">♥</span> wise
+    </a>
+
+</body>
+
+</html>
